@@ -1,0 +1,22 @@
+#! /bin/bash -e
+
+cd $(dirname $0)/..
+source ./auto/set-env-vars
+
+STACK_NAME=$(echo ${STACK_NAME:-${1:-"workshop-users"}} | tr "A-Z" "a-z")
+
+docker run --rm -v $PWD:/cwd \
+	-e AWS_ACCOUNT \
+	-e AWS_EXPIRE \
+	-e AWS_EXPIRETIME \
+	-e AWS_ROLE \
+	-e AWS_ROLE_SESSION_NAME \
+	-e AWS_SESSION_TOKEN \
+	-e AWS_ACCESS_KEY_ID \
+	-e AWS_SECRET_ACCESS_KEY \
+	-e AWS_SECURITY_TOKEN \
+	-e AWS_DEFAULT_REGION \
+	"${STACKUP_IMAGE}@${STACKUP_HASH}" \
+	"${STACK_NAME}" \
+	delete \
+	--region ap-southeast-1

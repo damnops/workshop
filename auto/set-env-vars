@@ -1,0 +1,6 @@
+STACKUP_HASH="sha256:5b5881a3a0b5c89c5e23f5144bc1e880b5de3cc4fbd797b096137d481884c1db"
+STACKUP_IMAGE="realestate/stackup"
+
+display_status() {
+    echo ">>> $1 <<<" 1>&2
+}
