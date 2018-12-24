@@ -19,6 +19,6 @@ docker run --rm -v $PWD:/cwd \
 	"${STACKUP_IMAGE}@${STACKUP_HASH}" \
 	"${STACK_NAME}" \
 	up \
-	--template ./aws/cloudformation.yml \
-	--tags ./aws/tags.yml \
+	--template ./aws/deployment/users/cloudformation.yml \
+	--tags ./aws/deployment/users/tags.yml \
 	--region ap-southeast-1
