@@ -25,4 +25,4 @@
 如需要给EC2机器配置登录使用的SSH key，请在Console或者其他相关配置中使用`workshop`，对应的私钥为`aws/keys/workshop.pem`
 
 ## 号码条
-上传了一个NumbersForPrinting.docx的文件，里面有01到20个号码，pull下来，大家可以打印出来给Workshop的各位学员。
+上传了一个NumbersForPrinting.pdf的文件，里面有01到20个号码，pull下来，大家可以打印出来给Workshop的各位学员。
