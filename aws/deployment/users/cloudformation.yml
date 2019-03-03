@@ -3,7 +3,7 @@ Parameters:
   PasswordPrefix:
     Description: Used to generate temporary password
     Type: String
-    Default: Password@2018
+    Default: Password@2019
 Resources:
   WorkshopGroup:
     Type: 'AWS::IAM::Group'

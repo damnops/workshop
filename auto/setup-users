@@ -3,7 +3,7 @@
 cd $(dirname $0)/..
 source ./auto/set-env-vars
 
-STACK_NAME=$(echo ${STACK_NAME:-${2:-"workshop-users"}} | tr "A-Z" "a-z")
+STACK_NAME=$(echo ${STACK_NAME:-${1:-"workshop-users"}} | tr "A-Z" "a-z")
 
 docker run --rm -v $PWD:/cwd \
 	-e AWS_ACCOUNT \
