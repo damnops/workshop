@@ -203,3 +203,51 @@ Resources:
       Groups:
         - !Ref WorkshopGroup
       Path: /
+  WorkshopUser17:
+    Type: 'AWS::IAM::User'
+    Properties:
+      UserName: workshopuser17
+      LoginProfile:
+        Password: !Join 
+          - ''
+          - - !Ref PasswordPrefix
+            - '#17'
+      Groups:
+        - !Ref WorkshopGroup
+      Path: /
+  WorkshopUser18:
+    Type: 'AWS::IAM::User'
+    Properties:
+      UserName: workshopuser18
+      LoginProfile:
+        Password: !Join 
+          - ''
+          - - !Ref PasswordPrefix
+            - '#18'
+      Groups:
+        - !Ref WorkshopGroup
+      Path: /
+  WorkshopUser19:
+    Type: 'AWS::IAM::User'
+    Properties:
+      UserName: workshopuser19
+      LoginProfile:
+        Password: !Join 
+          - ''
+          - - !Ref PasswordPrefix
+            - '#19'
+      Groups:
+        - !Ref WorkshopGroup
+      Path: /
+  WorkshopUser20:
+    Type: 'AWS::IAM::User'
+    Properties:
+      UserName: workshopuser20
+      LoginProfile:
+        Password: !Join 
+          - ''
+          - - !Ref PasswordPrefix
+            - '#20'
+      Groups:
+        - !Ref WorkshopGroup
+      Path: /
