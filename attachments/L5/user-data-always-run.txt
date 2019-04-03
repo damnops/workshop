@@ -1,0 +1,37 @@
+Content-Type: multipart/mixed; boundary="workshop_boundary"
+MIME-Version: 1.0
+
+--workshop_boundary
+Content-Type: text/cloud-config; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="cloud-config.txt"
+
+cloud_final_modules:
+- [scripts-user, always]
+
+packages:
+ - httpd
+
+runcmd:
+  - [ systemctl, enable, httpd.service ]
+  - [ systemctl, start, httpd.service ]
+
+write_files:
+  - path: /var/www/html/index.html
+    owner: apache:apache
+    permissions: '0444'
+    content: |
+      Hello Workshop!
+
+--workshop_boundary
+Content-Type: text/x-shellscript; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: attachment; filename="userdata.txt"
+
+#!/bin/bash
+echo '<br/>' >> /var/www/html/index.html
+date >> /var/www/html/index.html
+--workshop_boundary--
+

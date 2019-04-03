@@ -1,0 +1,15 @@
+#cloud-config
+packages:
+ - httpd
+
+runcmd:
+  - [ systemctl, enable, httpd.service ]
+  - [ systemctl, start, httpd.service ]
+
+write_files:
+  - path: /var/www/html/index.html
+    owner: apache:apache
+    permissions: '0444'
+    content: |
+      Hello Workshop!
+
