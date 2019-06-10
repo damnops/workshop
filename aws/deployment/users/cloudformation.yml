@@ -1,253 +1,133 @@
-Description: Create users for workshop
+Description: Create coach users for DevOps Girls
 Parameters:
   PasswordPrefix:
     Description: Used to generate temporary password
     Type: String
     Default: Password@2019
 Resources:
-  WorkshopGroup:
+  DevOpsGirlsCoachGroup:
     Type: 'AWS::IAM::Group'
     Properties:
-      GroupName: workshop
+      GroupName: devops-girls-coach
       ManagedPolicyArns:
         - 'arn:aws:iam::aws:policy/PowerUserAccess'
-  WorkshopUser01:
+  Coach01:
     Type: 'AWS::IAM::User'
     Properties:
-      UserName: workshopuser01
+      UserName: Coach01
       LoginProfile:
         Password: !Join 
           - ''
           - - !Ref PasswordPrefix
             - '#01'
       Groups:
-        - !Ref WorkshopGroup
+        - !Ref DevOpsGirlsCoachGroup
       Path: /
-  WorkshopUser02:
+  Coach02:
     Type: 'AWS::IAM::User'
     Properties:
-      UserName: workshopuser02
+      UserName: Coach02
       LoginProfile:
         Password: !Join 
           - ''
           - - !Ref PasswordPrefix
             - '#02'
       Groups:
-        - !Ref WorkshopGroup
+        - !Ref DevOpsGirlsCoachGroup
       Path: /
-  WorkshopUser03:
+  Coach03:
     Type: 'AWS::IAM::User'
     Properties:
-      UserName: workshopuser03
+      UserName: Coach03
       LoginProfile:
         Password: !Join 
           - ''
           - - !Ref PasswordPrefix
             - '#03'
       Groups:
-        - !Ref WorkshopGroup
+        - !Ref DevOpsGirlsCoachGroup
       Path: /
-  WorkshopUser04:
+  Coach04:
     Type: 'AWS::IAM::User'
     Properties:
-      UserName: workshopuser04
+      UserName: Coach04
       LoginProfile:
         Password: !Join 
           - ''
           - - !Ref PasswordPrefix
             - '#04'
       Groups:
-        - !Ref WorkshopGroup
+        - !Ref DevOpsGirlsCoachGroup
       Path: /
-  WorkshopUser05:
+  Coach05:
     Type: 'AWS::IAM::User'
     Properties:
-      UserName: workshopuser05
+      UserName: Coach05
       LoginProfile:
         Password: !Join 
           - ''
           - - !Ref PasswordPrefix
             - '#05'
       Groups:
-        - !Ref WorkshopGroup
+        - !Ref DevOpsGirlsCoachGroup
       Path: /
-  WorkshopUser06:
+  Coach06:
     Type: 'AWS::IAM::User'
     Properties:
-      UserName: workshopuser06
+      UserName: Coach06
       LoginProfile:
         Password: !Join 
           - ''
           - - !Ref PasswordPrefix
             - '#06'
       Groups:
-        - !Ref WorkshopGroup
+        - !Ref DevOpsGirlsCoachGroup
       Path: /
-  WorkshopUser07:
+  Coach07:
     Type: 'AWS::IAM::User'
     Properties:
-      UserName: workshopuser07
+      UserName: Coach07
       LoginProfile:
         Password: !Join 
           - ''
           - - !Ref PasswordPrefix
             - '#07'
       Groups:
-        - !Ref WorkshopGroup
+        - !Ref DevOpsGirlsCoachGroup
       Path: /
-  WorkshopUser08:
+  Coach08:
     Type: 'AWS::IAM::User'
     Properties:
-      UserName: workshopuser08
+      UserName: Coach08
       LoginProfile:
         Password: !Join 
           - ''
           - - !Ref PasswordPrefix
             - '#08'
       Groups:
-        - !Ref WorkshopGroup
+        - !Ref DevOpsGirlsCoachGroup
       Path: /
-  WorkshopUser09:
+  Coach09:
     Type: 'AWS::IAM::User'
     Properties:
-      UserName: workshopuser09
+      UserName: Coach09
       LoginProfile:
         Password: !Join 
           - ''
           - - !Ref PasswordPrefix
             - '#09'
       Groups:
-        - !Ref WorkshopGroup
+        - !Ref DevOpsGirlsCoachGroup
       Path: /
-  WorkshopUser10:
+  Coach10:
     Type: 'AWS::IAM::User'
     Properties:
-      UserName: workshopuser10
+      UserName: Coach10
       LoginProfile:
         Password: !Join 
           - ''
           - - !Ref PasswordPrefix
             - '#10'
       Groups:
-        - !Ref WorkshopGroup
-      Path: /
-  WorkshopUser11:
-    Type: 'AWS::IAM::User'
-    Properties:
-      UserName: workshopuser11
-      LoginProfile:
-        Password: !Join 
-          - ''
-          - - !Ref PasswordPrefix
-            - '#11'
-      Groups:
-        - !Ref WorkshopGroup
-      Path: /
-  WorkshopUser12:
-    Type: 'AWS::IAM::User'
-    Properties:
-      UserName: workshopuser12
-      LoginProfile:
-        Password: !Join 
-          - ''
-          - - !Ref PasswordPrefix
-            - '#12'
-      Groups:
-        - !Ref WorkshopGroup
-      Path: /
-  WorkshopUser13:
-    Type: 'AWS::IAM::User'
-    Properties:
-      UserName: workshopuser13
-      LoginProfile:
-        Password: !Join 
-          - ''
-          - - !Ref PasswordPrefix
-            - '#13'
-      Groups:
-        - !Ref WorkshopGroup
-      Path: /
-  WorkshopUser14:
-    Type: 'AWS::IAM::User'
-    Properties:
-      UserName: workshopuser14
-      LoginProfile:
-        Password: !Join 
-          - ''
-          - - !Ref PasswordPrefix
-            - '#14'
-      Groups:
-        - !Ref WorkshopGroup
-      Path: /
-  WorkshopUser15:
-    Type: 'AWS::IAM::User'
-    Properties:
-      UserName: workshopuser15
-      LoginProfile:
-        Password: !Join 
-          - ''
-          - - !Ref PasswordPrefix
-            - '#15'
-      Groups:
-        - !Ref WorkshopGroup
-      Path: /
-  WorkshopUser16:
-    Type: 'AWS::IAM::User'
-    Properties:
-      UserName: workshopuser16
-      LoginProfile:
-        Password: !Join 
-          - ''
-          - - !Ref PasswordPrefix
-            - '#16'
-      Groups:
-        - !Ref WorkshopGroup
-      Path: /
-  WorkshopUser17:
-    Type: 'AWS::IAM::User'
-    Properties:
-      UserName: workshopuser17
-      LoginProfile:
-        Password: !Join 
-          - ''
-          - - !Ref PasswordPrefix
-            - '#17'
-      Groups:
-        - !Ref WorkshopGroup
-      Path: /
-  WorkshopUser18:
-    Type: 'AWS::IAM::User'
-    Properties:
-      UserName: workshopuser18
-      LoginProfile:
-        Password: !Join 
-          - ''
-          - - !Ref PasswordPrefix
-            - '#18'
-      Groups:
-        - !Ref WorkshopGroup
-      Path: /
-  WorkshopUser19:
-    Type: 'AWS::IAM::User'
-    Properties:
-      UserName: workshopuser19
-      LoginProfile:
-        Password: !Join 
-          - ''
-          - - !Ref PasswordPrefix
-            - '#19'
-      Groups:
-        - !Ref WorkshopGroup
-      Path: /
-  WorkshopUser20:
-    Type: 'AWS::IAM::User'
-    Properties:
-      UserName: workshopuser20
-      LoginProfile:
-        Password: !Join 
-          - ''
-          - - !Ref PasswordPrefix
-            - '#20'
-      Groups:
-        - !Ref WorkshopGroup
+        - !Ref DevOpsGirlsCoachGroup
       Path: /
