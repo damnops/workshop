@@ -16,7 +16,7 @@ docker run --rm -v $PWD:/cwd \
 	-e AWS_SECRET_ACCESS_KEY \
 	-e AWS_SECURITY_TOKEN \
 	-e AWS_DEFAULT_REGION \
-	"${STACKUP_IMAGE}@${STACKUP_HASH}" \
+	"${STACKUP_IMAGE}:${STACKUP_TAG}" \
 	"${STACK_NAME}" \
 	up \
 	--template ./aws/deployment/users/cloudformation.yml \

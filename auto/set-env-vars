@@ -1,4 +1,4 @@
-STACKUP_HASH="sha256:1709f52e95abcd1c968020a9d9651727adcb4d9dcc00b3643a3717c5cb028d4a"
+STACKUP_TAG="1.4.2"
 STACKUP_IMAGE="realestate/stackup"
 
 display_status() {
