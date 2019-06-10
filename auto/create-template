@@ -1,0 +1,36 @@
+#!/bin/bash -e
+
+cd $(dirname $0)/..
+source ./auto/set-env-vars
+
+if [ $# -lt 1 ]; then
+  echo "Usage: $0 NUMBER"
+  exit
+fi
+
+TML_FILE="aws/deployment/users/cloudformation.yml"
+
+cat <<_EOF > ${TML_FILE} 
+Description: Create users for workshop
+Resources:
+  WorkshopGroup:
+    Type: 'AWS::IAM::Group'
+    Properties:
+      GroupName: workshop
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/PowerUserAccess'
+_EOF
+
+for i in $(seq -w 1 $1); do
+cat <<_EOF >> ${TML_FILE} 
+  WorkshopUser${i}:
+    Type: 'AWS::IAM::User'
+    Properties:
+      UserName: workshopuser${i}
+      LoginProfile:
+        Password: ${PASSWORD_PREFIX}${i}
+      Groups:
+        - !Ref WorkshopGroup
+      Path: /
+_EOF
+done

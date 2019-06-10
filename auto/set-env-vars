@@ -1,6 +1,9 @@
 STACKUP_HASH="sha256:1709f52e95abcd1c968020a9d9651727adcb4d9dcc00b3643a3717c5cb028d4a"
 STACKUP_IMAGE="realestate/stackup"
 
+PASSWORD_PREFIX="Password@2019#"
+STACK_NAME="tw-toc-workshop-users"
+
 display_status() {
     echo ">>> $1 <<<" 1>&2
 }
