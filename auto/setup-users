@@ -3,7 +3,9 @@
 cd $(dirname $0)/..
 source ./auto/set-env-vars
 
-STACK_NAME=$(echo ${STACK_NAME:-${1:-"workshop-users"}} | tr "A-Z" "a-z")
+./auto/create-template $1
+
+STACK_NAME=$(echo ${STACK_NAME:-"tw-toc-workshop-users"} | tr "A-Z" "a-z")
 
 docker run --rm -v $PWD:/cwd \
 	-e AWS_ACCOUNT \
